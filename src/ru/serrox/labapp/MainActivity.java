@@ -30,6 +30,14 @@ public class MainActivity extends Activity {
                 startActivity(intent);
             }
         });
+        Button go_lw3 = (Button) findViewById(R.id.butlw3);
+        go_lw3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, lw3Activity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 }

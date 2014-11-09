@@ -13,5 +13,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".lw1Activity" android:label="lw1a"/>
+        <activity android:name=".lw2Activity" android:label="lw2a"/>
     </application>
 </manifest>

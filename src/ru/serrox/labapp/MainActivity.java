@@ -22,6 +22,14 @@ public class MainActivity extends Activity {
                 startActivity(intent);
             }
         });
+        Button go_lw2 = (Button) findViewById(R.id.butlw2);
+        go_lw2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, lw2Activity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 }

@@ -70,10 +70,11 @@ public class lw3Activity extends Activity implements SensorEventListener {
         SensorManager.getRotationMatrix(rotationMatrix, null, accelData, magnetData);
         SensorManager.getOrientation (rotationMatrix, OrientationData);
 
-        int color = Color.rgb((int)((OrientationData[0]/360)*255),(int)((OrientationData[1]/360)*255),(int)((OrientationData[2]/360)*255));
+        int color = Color.rgb((int)((OrientationData[0]/360.0)*255.0),(int)((OrientationData[1]/360.0)*255.0),(int)((OrientationData[2]/360.0)*255.0));
         ((FrameLayout)findViewById(R.id.lw3_color_view)).setBackgroundColor(color);
 
-        ((TextView)findViewById(R.id.lw3_color_value)).setText("R: " + (int)((OrientationData[0]/360)*255) +" G: " + (int)((OrientationData[1]/360)*255) + " B: " + (int)((OrientationData[2]/360)*255));
+        ((TextView)findViewById(R.id.lw3_color_value)).setText("R: " + Color.red(color) + "(" + OrientationData[0] +") G: " + Color.green(color) + "(" + OrientationData[1] +") B: " + Color.blue(color) + "(" + OrientationData[2] +")");
+        ;
     }
 
     @Override

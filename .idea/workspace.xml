@@ -99,14 +99,16 @@
       <file leaf-file-name="lw2Activity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ru/serrox/labapp/lw2Activity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7017544" vertical-offset="110" max-vertical-offset="680">
-              <caret line="30" column="72" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="72" />
+            <state vertical-scroll-proportion="0.8807018" vertical-offset="127" max-vertical-offset="850">
+              <caret line="37" column="46" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#567#575#0" expanded="true" />
-                <element signature="e#634#642#0" expanded="true" />
-                <element signature="e#832#1158#0" expanded="true" />
-                <element signature="e#1157#1158#0" expanded="true" />
+                <element signature="e#487#495#0" expanded="true" />
+                <element signature="e#554#562#0" expanded="true" />
+                <element signature="e#786#1102#0" expanded="true" />
+                <element signature="e#1101#1102#0" expanded="true" />
+                <element signature="e#1186#1431#0" expanded="true" />
+                <element signature="e#1430#1431#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -200,8 +202,8 @@
         <option value="$PROJECT_DIR$/res/values-ru/strings.xml" />
         <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/res/layout/lw2_layout.xml" />
-        <option value="$PROJECT_DIR$/src/ru/serrox/labapp/lw2Activity.java" />
         <option value="$PROJECT_DIR$/res/layout/lw2_item_layout.xml" />
+        <option value="$PROJECT_DIR$/src/ru/serrox/labapp/lw2Activity.java" />
       </list>
     </option>
   </component>
@@ -210,7 +212,8 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="width" value="1288" />
+    <option name="y" value="-8" />
+    <option name="width" value="1296" />
     <option name="height" value="1000" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -396,13 +399,12 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="emulator-5554" />
     <property name="FullScreen" value="false" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteToolWindowManager.SHOW" value="true" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="TestAVD" />
   </component>
   <component name="RunManager" selected="Android Application.labapp">
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -697,22 +699,22 @@
       <workItem from="1415530551152" duration="5664000" />
       <workItem from="1415539477642" duration="838000" />
       <workItem from="1415540468501" duration="999000" />
-      <workItem from="1415542694845" duration="4423000" />
+      <workItem from="1415542694845" duration="7742000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13570000" />
+    <option name="totallyTimeSpent" value="16889000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1288" height="1000" extended-state="0" />
+    <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3295964" sideWeight="0.20833333" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3295964" sideWeight="0.20859376" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -729,8 +731,8 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295964" sideWeight="0.6548742" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3295964" sideWeight="0.7908805" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.168239" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3295964" sideWeight="0.790625" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1671875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -1151,14 +1153,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/serrox/labapp/lw2Activity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7017544" vertical-offset="110" max-vertical-offset="680">
-          <caret line="30" column="72" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="72" />
+        <state vertical-scroll-proportion="0.8807018" vertical-offset="127" max-vertical-offset="850">
+          <caret line="37" column="46" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#567#575#0" expanded="true" />
-            <element signature="e#634#642#0" expanded="true" />
-            <element signature="e#832#1158#0" expanded="true" />
-            <element signature="e#1157#1158#0" expanded="true" />
+            <element signature="e#487#495#0" expanded="true" />
+            <element signature="e#554#562#0" expanded="true" />
+            <element signature="e#786#1102#0" expanded="true" />
+            <element signature="e#1101#1102#0" expanded="true" />
+            <element signature="e#1186#1431#0" expanded="true" />
+            <element signature="e#1430#1431#0" expanded="true" />
           </folding>
         </state>
       </provider>

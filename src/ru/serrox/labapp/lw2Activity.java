@@ -1,26 +1,40 @@
 package ru.serrox.labapp;
 
 import android.app.Activity;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Base64;
+import android.util.Base64InputStream;
 import android.util.Log;
 import android.view.View;
 import android.widget.*;
 
+import java.io.ByteArrayInputStream;
+import java.io.ObjectInputStream;
 import java.util.ArrayList;
 
 /**
  * Created by serrox on 09.11.2014.
  */
 public class lw2Activity extends Activity {
+    ArrayList<String> items = null;
+    ArrayAdapter<String> a = null;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.lw2_layout);
 
-        final ArrayList<String> items = new ArrayList<String>();
-        final ArrayAdapter<String> a = new ArrayAdapter<String>(this, R.layout.lw2_item_layout, R.id.lw2_tv_obj, items);
+        items = new ArrayList<String>();
+        a = new ArrayAdapter<String>(this, R.layout.lw2_item_layout, R.id.lw2_tv_obj, items);
         ListView listv = (ListView) findViewById(R.id.lw2_listView);
         listv.setAdapter(a);
+
+        SharedPreferences sharepref = getSharedPreferences("MYAPP", Activity.MODE_PRIVATE);
+        int count = sharepref.getInt("Size", 0);
+        for (int i=0;i<count;i++){
+            a.add(sharepref.getString("N"+i,""));
+        }
 
         ((Button) findViewById(R.id.lw2_add_b)).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,7 +53,20 @@ public class lw2Activity extends Activity {
                 return true;
             }
         });
+    }
 
+    @Override
+    protected void onPause() {
+        SharedPreferences sharepref = getSharedPreferences("MYAPP", Activity.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharepref.edit();
 
+        editor.putInt("Size",a.getCount());
+        for(int i=0;i<a.getCount();i++){
+            editor.putString("N" + i, a.getItem(i));
+        }
+
+        editor.commit();
+
+        super.onPause();
     }
 }

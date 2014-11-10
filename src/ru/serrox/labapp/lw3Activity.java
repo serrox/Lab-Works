@@ -19,10 +19,10 @@ import java.util.Random;
 public class lw3Activity extends Activity implements SensorEventListener {
     private SensorManager sensormgr;
 
-    private float[] rotationMatrix;
-    private float[] accelData;
-    private float[] magnetData;
-    private float[] OrientationData;
+    private float[] rotationMatrix = new float[16];
+    private float[] accelData = new float[3];
+    private float[] magnetData = new float[3];
+    private float[] OrientationData = new float[3];
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -31,11 +31,11 @@ public class lw3Activity extends Activity implements SensorEventListener {
 
         sensormgr = (SensorManager)getSystemService(Context.SENSOR_SERVICE);
 
-        rotationMatrix = new float[16];
+        /*rotationMatrix = new float[16];
         accelData = new float[3];
         magnetData = new float[3];
         OrientationData = new float[3];
-
+*/
         Random rnd = new Random();
         int color = rnd.nextInt();
         ((FrameLayout)findViewById(R.id.lw3_target_color_view)).setBackgroundColor(color);
@@ -70,11 +70,15 @@ public class lw3Activity extends Activity implements SensorEventListener {
         SensorManager.getRotationMatrix(rotationMatrix, null, accelData, magnetData);
         SensorManager.getOrientation (rotationMatrix, OrientationData);
 
-        int color = Color.rgb((int)((OrientationData[0]/360.0)*255.0),(int)((OrientationData[1]/360.0)*255.0),(int)((OrientationData[2]/360.0)*255.0));
+
+
+        int xy2 = (int) (((Math.toDegrees(OrientationData[0]))+180.0)*255.0/360.0);
+        int xz2 = (int) (((Math.toDegrees(OrientationData[1]))+180.0)*255.0/360.0);
+        int zy2 = (int) (((Math.toDegrees(OrientationData[2]))+180.0)*255.0/360.0);
+        int color = Color.rgb(xy2, xz2, zy2);
         ((FrameLayout)findViewById(R.id.lw3_color_view)).setBackgroundColor(color);
 
-        ((TextView)findViewById(R.id.lw3_color_value)).setText("R: " + Color.red(color) + "(" + OrientationData[0] +") G: " + Color.green(color) + "(" + OrientationData[1] +") B: " + Color.blue(color) + "(" + OrientationData[2] +")");
-        ;
+        ((TextView)findViewById(R.id.lw3_color_value)).setText("R: " + Color.red(color) + " G: " + Color.green(color) + " B: " + Color.blue(color));
     }
 
     @Override

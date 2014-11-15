@@ -10,6 +10,7 @@ import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.widget.FrameLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Random;
 
@@ -23,6 +24,7 @@ public class lw3Activity extends Activity implements SensorEventListener {
     private float[] accelData = new float[3];
     private float[] magnetData = new float[3];
     private float[] OrientationData = new float[3];
+    private int _color;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -37,9 +39,9 @@ public class lw3Activity extends Activity implements SensorEventListener {
         OrientationData = new float[3];
 */
         Random rnd = new Random();
-        int color = rnd.nextInt();
-        ((FrameLayout)findViewById(R.id.lw3_target_color_view)).setBackgroundColor(color);
-        ((TextView)findViewById(R.id.lw3_target_color_value)).setText("R: " + Color.red(color) +" G: " + Color.green(color) + " B: " + Color.blue(color));
+        _color = rnd.nextInt();
+        ((FrameLayout)findViewById(R.id.lw3_target_color_view)).setBackgroundColor(_color);
+        ((TextView)findViewById(R.id.lw3_target_color_value)).setText("R: " + Color.red(_color) +" G: " + Color.green(_color) + " B: " + Color.blue(_color));
     }
 
     @Override
@@ -79,6 +81,15 @@ public class lw3Activity extends Activity implements SensorEventListener {
         ((FrameLayout)findViewById(R.id.lw3_color_view)).setBackgroundColor(color);
 
         ((TextView)findViewById(R.id.lw3_color_value)).setText("R: " + Color.red(color) + " G: " + Color.green(color) + " B: " + Color.blue(color));
+        if((Math.abs(xy2 - Color.red(_color))<40) && (Math.abs(xz2 - Color.green(_color))<40) && (Math.abs(zy2 - Color.blue(_color))<40) &&
+                ((Math.abs(xy2 - Color.red(_color)) + Math.abs(xz2 - Color.green(_color)) + Math.abs(zy2 - Color.blue(_color)))<80 )){
+            Toast toast = Toast.makeText(getApplicationContext(),"Epic Win!", Toast.LENGTH_SHORT);
+            toast.show();
+            Random rnd = new Random();
+            _color = rnd.nextInt();
+            ((FrameLayout)findViewById(R.id.lw3_target_color_view)).setBackgroundColor(_color);
+            ((TextView)findViewById(R.id.lw3_target_color_value)).setText("R: " + Color.red(_color) +" G: " + Color.green(_color) + " B: " + Color.blue(_color));
+        }
     }
 
     @Override

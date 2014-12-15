@@ -4,8 +4,6 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.FrameLayout;
-import android.widget.GridLayout;
 
 import java.util.Random;
 
@@ -28,14 +26,13 @@ public class lw1Activity extends Activity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.lw1_upd:
-                // TODO: обработчик нажатия здесь
                 Random rnd = new Random();
-                ((FrameLayout)findViewById(R.id.lw1_bc)).setBackgroundColor(rnd.nextInt());
-                ((FrameLayout)findViewById(R.id.lw1_bl)).setBackgroundColor(rnd.nextInt());
-                ((FrameLayout)findViewById(R.id.lw1_cc)).setBackgroundColor(rnd.nextInt());
-                ((FrameLayout)findViewById(R.id.lw1_cr)).setBackgroundColor(rnd.nextInt());
-                ((FrameLayout)findViewById(R.id.lw1_tl)).setBackgroundColor(rnd.nextInt());
-                ((FrameLayout)findViewById(R.id.lw1_tr)).setBackgroundColor(rnd.nextInt());
+                findViewById(R.id.lw1_bc).setBackgroundColor(rnd.nextInt());
+                findViewById(R.id.lw1_bl).setBackgroundColor(rnd.nextInt());
+                findViewById(R.id.lw1_cc).setBackgroundColor(rnd.nextInt());
+                findViewById(R.id.lw1_cr).setBackgroundColor(rnd.nextInt());
+                findViewById(R.id.lw1_tl).setBackgroundColor(rnd.nextInt());
+                findViewById(R.id.lw1_tr).setBackgroundColor(rnd.nextInt());
                 return true;
         }
 

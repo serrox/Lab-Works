@@ -8,7 +8,6 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
-import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -40,8 +39,9 @@ public class lw3Activity extends Activity implements SensorEventListener {
 */
         Random rnd = new Random();
         _color = rnd.nextInt();
-        ((FrameLayout)findViewById(R.id.lw3_target_color_view)).setBackgroundColor(_color);
+        findViewById(R.id.lw3_target_color_view).setBackgroundColor(_color);
         ((TextView)findViewById(R.id.lw3_target_color_value)).setText("R: " + Color.red(_color) +" G: " + Color.green(_color) + " B: " + Color.blue(_color));
+
     }
 
     @Override
@@ -69,6 +69,7 @@ public class lw3Activity extends Activity implements SensorEventListener {
         if (type == Sensor.TYPE_MAGNETIC_FIELD) {
             magnetData = event.values.clone();
         }
+        //float[] mD = {1,1,magnetData[2]};
         SensorManager.getRotationMatrix(rotationMatrix, null, accelData, magnetData);
         SensorManager.getOrientation (rotationMatrix, OrientationData);
 
@@ -78,7 +79,7 @@ public class lw3Activity extends Activity implements SensorEventListener {
         int xz2 = (int) (((Math.toDegrees(OrientationData[1]))+180.0)*255.0/360.0);
         int zy2 = (int) (((Math.toDegrees(OrientationData[2]))+180.0)*255.0/360.0);
         int color = Color.rgb(xy2, xz2, zy2);
-        ((FrameLayout)findViewById(R.id.lw3_color_view)).setBackgroundColor(color);
+        findViewById(R.id.lw3_color_view).setBackgroundColor(color);
 
         ((TextView)findViewById(R.id.lw3_color_value)).setText("R: " + Color.red(color) + " G: " + Color.green(color) + " B: " + Color.blue(color));
         if((Math.abs(xy2 - Color.red(_color))<40) && (Math.abs(xz2 - Color.green(_color))<40) && (Math.abs(zy2 - Color.blue(_color))<40) &&
@@ -87,9 +88,12 @@ public class lw3Activity extends Activity implements SensorEventListener {
             toast.show();
             Random rnd = new Random();
             _color = rnd.nextInt();
-            ((FrameLayout)findViewById(R.id.lw3_target_color_view)).setBackgroundColor(_color);
+            findViewById(R.id.lw3_target_color_view).setBackgroundColor(_color);
             ((TextView)findViewById(R.id.lw3_target_color_value)).setText("R: " + Color.red(_color) +" G: " + Color.green(_color) + " B: " + Color.blue(_color));
         }
+        ((TextView)findViewById(R.id.textView)).setText(""+rotationMatrix[0] + " " + rotationMatrix[1] +" " + rotationMatrix[2] + "\n"
+                                                        + rotationMatrix[4] + " " + rotationMatrix[5] + " " + rotationMatrix[6] + "\n"
+                                                        + rotationMatrix[8] + " " + rotationMatrix[9] + " " + rotationMatrix[10]);
     }
 
     @Override

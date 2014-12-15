@@ -3,14 +3,9 @@ package ru.serrox.labapp;
 import android.app.Activity;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Base64;
-import android.util.Base64InputStream;
-import android.util.Log;
 import android.view.View;
 import android.widget.*;
 
-import java.io.ByteArrayInputStream;
-import java.io.ObjectInputStream;
 import java.util.ArrayList;
 
 /**
@@ -36,7 +31,7 @@ public class lw2Activity extends Activity {
             a.add(sharepref.getString("N"+i,""));
         }
 
-        ((Button) findViewById(R.id.lw2_add_b)).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.lw2_add_b).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 a.add(((EditText) findViewById(R.id.lw2_input)).getText().toString());
@@ -65,7 +60,7 @@ public class lw2Activity extends Activity {
             editor.putString("N" + i, a.getItem(i));
         }
 
-        editor.commit();
+        editor.apply();
 
         super.onPause();
     }
